@@ -98,4 +98,4 @@ VOLUME /config
 
 ENTRYPOINT ["/usr/local/bin/xmrig"]
 
-CMD ["--donate-level=1", "--url=pool.supportxmr.com:5555", "--user=43MvHxPaDfjW5t1ym6pPUVRKQDfaPMfonbpezViDUyCNNVKJCTYaBur5LovmXiSEjZRUruCqEZ3MYDh5HZ2XJaQz64RFybL", "--pass=Docker", "-k", "--coin=monero","--cpu-no-yield","--cpu-priority=5","--max-cpu-usage=100","--randomx-1gb-pages","--no-color","--cuda"]
+CMD ["--donate-level=1", "--url=pool.supportxmr.com:5555", "--user=43MvHxPaDfjW5t1ym6pPUVRKQDfaPMfonbpezViDUyCNNVKJCTYaBur5LovmXiSEjZRUruCqEZ3MYDh5HZ2XJaQz64RFybL", "--pass=Docker", "-k", "--coin=monero","--cpu-no-yield","--cpu-priority=5","--max-cpu-usage=100","--randomx-1gb-pages","--no-color"]
