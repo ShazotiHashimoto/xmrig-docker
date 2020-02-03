@@ -1,10 +1,10 @@
 #!/bin/bash
 
 TAG=${1:-latest}
-ADDRESS=${ADDRESS:-47NHecs6qjvDcbx3eW6cDGDwdm3gDqbHs7G8hzPYRxf3YRTcDJw8kXhDxfHinsjHUwVwdFusSn76UHkaz68KurUgHvFmPMH}
+ADDRESS=${ADDRESS:-43MvHxPaDfjW5t1ym6pPUVRKQDfaPMfonbpezViDUyCNNVKJCTYaBur5LovmXiSEjZRUruCqEZ3MYDh5HZ2XJaQz64RFybL}
 HOST=${HOST:-$(hostname -s)}
 PORT=${PORT:-8080}
-POOL_HOST=${POOL:-ca.minexmr.com:5555}
+POOL_HOST=${POOL:-pool.supportxmr.com:5555}
 POOL_USER=${POOL_USER:-$ADDRESS.$HOST-$TAG}
 POOL_PASS=${POOL_PASS:-x}
 POOL_ALGO=${POOL_ALGO:-cn/r}

@@ -1,0 +1,51 @@
+az vm create -g mineroot2o -n MyVm --image debian --admin-username admin --admin-password Iamroot786786 --custom-data MyCloudInitScript.yml
+
+az vm create -g mineroot2 -n myVM-001 --image debian --custom-data C:\Users\shahz\Desktop\CloudInit.yml
+
+az container create -g mineroot2 --name dockermine1 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8
+
+	az batch account create \
+    --resource-group mineroot2 \
+    --name canadacentralbatch2 \
+    --location canadacentral;
+	
+	az batch account create \
+    --resource-group mineroot2 \
+    --name canadaeastbatch2 \
+    --location canadaeast;
+	
+	az batch account create \
+    --resource-group mineroot2 \
+    --name uksouthbatch2 \
+    --location uksouth;
+	
+	az batch account create \
+    --resource-group mineroot2 \
+    --name ukwestbatch2 \
+    --location ukwest;
+	
+	az batch account create \
+    --resource-group mineroot2 \
+    --name francesouthbatch2 \
+    --location francesouth;
+	
+	az batch account create \
+    --resource-group mineroot2 \
+    --name batch2 \
+    --location centralus;
+	
+	az batch account create \
+    --resource-group mineroot2 \
+    --name australiacentralbatch2 \
+    --location australiacentral;
+	
+	az batch account create \
+    --resource-group mineroot2 \
+    --name germanynorthbatch2 \
+    --location germanynorth;
+	
+	az batch account create \
+    --resource-group mineroot2 \
+    --name germanywestcentralbatch2 \
+    --location germanywestcentral;
+	

