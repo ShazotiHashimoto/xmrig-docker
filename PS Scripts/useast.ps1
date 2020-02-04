@@ -5,4 +5,3 @@ while($i -lt 101)
     $i++
 	az container create -g main --name useastmachine0$i --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 4  --location useast
 }
-6666
