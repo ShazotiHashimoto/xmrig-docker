@@ -3,7 +3,7 @@ $i=0
 while($i -lt 101)
 {
     $i++
-	az container create -g main --name canadacentralmachine0$i --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 4  --location canadacentral
+	az container create -g main --name brazilsouthmachine0$i --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 4  --location brazilsouth
 }
 
 
@@ -36,28 +36,28 @@ while($i -lt 101)
 
 
 
-az container create -g mineroot --name canadacentraldockermine1 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine2 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine3 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine4 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine5 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine6 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine7 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine8 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine9 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine10 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine11 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine12 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine13 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine14 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine15 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine16 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine17 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine18 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine19 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine20 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine21 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine22 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine23 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine24 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
-az container create -g mineroot --name canadacentraldockermine25 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location canadacentral;
+az container create -g mineroot --name brazilsouthdockermine1 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine2 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine3 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine4 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine5 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine6 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine7 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine8 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine9 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine10 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine11 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine12 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine13 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine14 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine15 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine16 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine17 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine18 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine19 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine20 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine21 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine22 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine23 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine24 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
+az container create -g mineroot --name brazilsouthdockermine25 --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 8  --location brazilsouth;
