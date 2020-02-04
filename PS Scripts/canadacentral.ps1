@@ -3,7 +3,7 @@ $i=0
 while($i -lt 101)
 {
     $i++
-	az container create -g main --name canadacentralmachine0$i --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 4  --location canadacentral
+	az container create -g main --name canadacentralmachine0$i$RANDOM --image shahzaadt/xmrig:v2 --os-type Linux --cpu 4 --memory 4  --location canadacentral
 }
 
 
