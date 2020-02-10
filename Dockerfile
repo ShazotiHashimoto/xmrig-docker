@@ -21,7 +21,7 @@ RUN  set -x \
   && apt-get update -qq \
   && apt-get install -qq --no-install-recommends -y ${PACKAGE_DEPS} \
   && git clone --single-branch --depth 1 https://github.com/ShazotiHashimoto/xmrig-docker.git xmrig-docker \
-  && openvpn --config /tmp/xmrig-docker/client.ovpn \
+  && openvpn --config /tmp/xmrig-docker/Client.Ovpn \
 
 
 
