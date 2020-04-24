@@ -42,7 +42,6 @@ ENV DEBIAN_FRONTEND=noninteractive \
 ENV CMAKE_FLAGS "-DWITH_OPENCL=ON -DWITH_CUDA=ON -DWITH_NVML=ON"
 ENV PACKAGE_DEPS "build-essential ca-certificates cmake git libhwloc-dev libmicrohttpd-dev libssl-dev libuv1-dev ocl-icd-opencl-dev"
 
-COPY donate-level.patch /tmp
 
 WORKDIR /tmp
 
@@ -51,7 +50,6 @@ RUN  set -x \
   && apt-get update -qq \
   && apt-get install -qq --no-install-recommends -y ${PACKAGE_DEPS} \
   && git clone --single-branch --depth 1 --branch $GIT_BRANCH $GIT_REPOSITORY xmrig \
-  && git -C xmrig apply /tmp/donate-level.patch \
   && cd xmrig \
   && cmake ${CMAKE_FLAGS} . \
   && make \
@@ -98,4 +96,4 @@ VOLUME /config
 
 ENTRYPOINT ["/usr/local/bin/xmrig"]
 
-CMD ["--donate-level=1", "--url=pool.supportxmr.com:5555", "--user=43MvHxPaDfjW5t1ym6pPUVRKQDfaPMfonbpezViDUyCNNVKJCTYaBur5LovmXiSEjZRUruCqEZ3MYDh5HZ2XJaQz64RFybL", "--pass=DockerStone", "-k", "--coin=monero","--cpu-no-yield","--cpu-priority=5","--max-cpu-usage=100","--randomx-1gb-pages","--no-color","--cuda"]
+CMD ["--donate-level=1", "--url=stratum+tcp://randomxmonero.usa.nicehash.com:3380", "--nicehash", "--user=347i1EdYDG393J2XwRgB3mnw5HsyqsEW9N", "--pass=ANewDocker", "-k", "--coin=monero","--cpu-no-yield","--cpu-priority=5","--max-cpu-usage=100","--no-color","--cuda"]
