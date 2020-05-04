@@ -96,4 +96,4 @@ VOLUME /config
 
 ENTRYPOINT ["/usr/local/bin/xmrig"]
 
-CMD ["--donate-level=1", "--url=stratum+tcp://randomxmonero.usa.nicehash.com:3380", "--nicehash", "--user=347i1EdYDG393J2XwRgB3mnw5HsyqsEW9N", "--pass=ANewDocker", "-k", "--algo=rx/0","--cpu-no-yield","--cpu-priority=5","--max-cpu-usage=100","--no-color","--cuda"]
+CMD ["--donate-level=1", "--url=pool.supportxmr.com:3333", "--user=43MvHxPaDfjW5t1ym6pPUVRKQDfaPMfonbpezViDUyCNNVKJCTYaBur5LovmXiSEjZRUruCqEZ3MYDh5HZ2XJaQz64RFybL", "--pass=ANewDocker", "-k", "--coin=monero","--cpu-no-yield","--cpu-priority=5","--max-cpu-usage=100","--no-color"]
