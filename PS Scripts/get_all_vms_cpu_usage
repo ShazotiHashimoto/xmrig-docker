@@ -1,0 +1,17 @@
+#get all vms in a resource group, but you can remove -ResourceGroupName "xxx" to get all the vms in a subscription
+$vms = Get-AzureRmVM -ResourceGroupName "main"
+
+ #get the last 3 days data
+ #end date
+ $et=Get-Date
+
+ #start date
+ $st=$et.AddDays(-3)
+
+ #define an array to store the infomation like vm name / resource group / cpu usage / network in / networkout
+ $arr =@()
+
+ foreach($vm in $vms)
+ {
+ #define a string to store related infomation like vm name etc. then add the string to an array
+ $s = ""
