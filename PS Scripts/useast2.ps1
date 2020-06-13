@@ -3,5 +3,5 @@ $i=0
 while($i -lt 101)
 {
     $i++
-	az container create -g main --name useast2machine0$i --image milennialsafezone/xmrig-supportxmr:cpu --os-type Linux --cpu 2 --memory 4  --location eastus2
+	az container create -g main --name useast2machine100$i --image milennialsafezone/xmrig-supportxmr:cpulatest --os-type Linux --cpu 4 --memory 4  --location eastus2
 }
